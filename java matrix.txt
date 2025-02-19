@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+     Scanner scan=new Scanner(System.in);
+     int row=scan.nextInt();
+     int column=scan.nextInt();
+     int [] [] matrix=new int [row][column];
+     for(int i=0;i<matrix.length;i++){
+         for(int j=0;j<matrix[0].length;j++){
+             System.out.print("Enter : "+i+" "+j+" ");
+             matrix[i][j]=scan.nextInt();
+         }
+     }
+     for(int i=0;i<matrix.length;i++){
+         for(int j=0;j<matrix[0].length;j++){
+             System.out.print(matrix[i][j]+" ");
+         }
+         System.out.println();
+         
+     }
+     
+     
+    }
+}
