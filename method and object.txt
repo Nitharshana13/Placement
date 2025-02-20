@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+class CarRental{
+    int CarId;
+    String CarType;
+    float Rent;
+    
+    void getCar(){
+        
+        Scanner in=new Scanner(System.in);
+        System.out.print("Car Type : ");
+        CarType=in.nextLine();
+        System.out.print("Car Id : ");
+        
+        CarId=in.nextInt();
+        in.nextLine();
+        
+        System.out.println();
+        
+    }
+   void getRent(){
+        switch(CarType)
+        {
+            case "SmallCar":
+                System.out.print("Rent : 1000"+Rent);
+                break;
+            case "Van":
+                System.out.print("Rent : 800"+Rent);
+                break;
+            case "SUV":
+                System.out.print("Rent : 2500"+Rent);
+                break;
+        }
+        System.out.println();
+        
+    
+    }
+    void ShowCar(){
+        Scanner in=new Scanner(System.in);
+        System.out.print("Car Type : "+CarType);
+        CarType=in.nextLine();
+        System.out.print("Car Id : "+CarId);
+        CarId=in.nextInt();
+        in.nextLine();
+        
+        System.out.print("Rent : "+Rent);
+        Rent=in.nextInt();
+        System.out.println();
+    }
+
+    
+}
+class Main{
+    public static void main(String[]args){
+        CarRental c=new CarRental();
+        c.getCar();
+        c.getRent();
+        c.ShowCar();
+    }
+}
+
+
+
+   
