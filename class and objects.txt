@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class student{
+    String name;
+    String regno;
+    int i;
+    void stu(){
+        for(i=1;i<5;i++){
+        Scanner in=new Scanner(System.in);
+        
+        System.out.print("Name : ");
+        name=in.nextLine();
+        
+        System.out.print("Reg No : ");
+        regno=in.nextLine();
+        
+        }
+        System.out.println();
+    }
+    
+}
+class Main {
+    public static void main(String []args){
+        student s=new student();
+        s.stu();
+        
+    }
+}
+
