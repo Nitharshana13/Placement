@@ -1,0 +1,16 @@
+class Super{
+    static void disp(){
+        System.out.println("In Super Class");
+    }
+}
+class Sub extends Super{
+    static void disp(){
+        System.out.println("In Sub Class");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Super obj=new Sub();
+        obj.disp();
+    }
+}
