@@ -1,0 +1,24 @@
+abstract class MyAbstractClass{
+    static int staticMember;
+    public abstract void find();
+    static{
+        staticMember =100;
+        System.out.println(" Static Member Initialized to : "+staticMember);
+    }
+    public static void displaystaticMember(){
+        System.out.println("Static Member Value : "+staticMember);
+    }
+}
+class concrete extends MyAbstractClass{
+    
+    public void find(){
+        System.out.println("The Find method is implemented in concrete class");
+    }
+}
+ class Main {
+    public static void main(String [] args){
+        MyAbstractClass.displaystaticMember();
+        concrete obj=new concrete();
+        
+    }
+}
