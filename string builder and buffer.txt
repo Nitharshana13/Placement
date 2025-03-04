@@ -1,0 +1,59 @@
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) {
+		Palindrome oh=new Palindrome();
+		oh.string();
+		oh.stringbuilder();
+		oh.stringbuffer();
+	}
+}
+	class Palindrome {
+
+		String str,rev="",str1,str2;
+		Scanner in=new Scanner(System.in);
+	
+	
+
+		public void string() {
+				
+			 System.out.println("Enter the String : ");
+		     str=in.nextLine();
+
+			for(int i=str.length()-1; i>=0; i--) {
+				rev=rev+str.charAt(i);
+			}
+			if(str.equals(rev)) {
+				System.out.println("The String is Palindrome");
+			}
+			else {
+				System.out.println("The String is not Palindrome");
+			}
+		}
+		public void stringbuilder(){
+		    System.out.println("Enter the String : ");
+		     str=in.nextLine();
+		     StringBuilder str1=new StringBuilder(str);
+		     str1.reverse();
+		     if(str.equals(str1.toString())){
+		         System.out.println("The String is Palindrome");
+		     }
+		     else{
+		         System.out.println("The String is not Palindrome");
+		     }
+		     
+		}
+		public void stringbuffer(){
+		    System.out.println("Enter the String : ");
+		     str=in.nextLine();
+		     StringBuffer str2=new StringBuffer(str);
+		     str2.reverse();
+		     if(str.equals(str2.toString())){
+		         System.out.println("The String is Palindrome");
+		     }
+		     else{
+		         System.out.println("The String is not Palindrome");
+		     }
+		     
+		}
+	}
